@@ -11,11 +11,15 @@ const { sequelize } = require('./models');
 // };
 
 const app = express();
-app.use(
-    cors({
-        origin: '*', // all 
-    })
-);
+app.use(cors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type, Authorization',
+}));
+app.use((req, res, next) => {
+    console.log('Origin Requesting:', req.get('origin'));
+    next();
+});
 app.use(express.json());
 
 sequelize.sync();
@@ -23,4 +27,4 @@ sequelize.sync();
 app.use('/', router);
 
 // Option 2: Create an HTTP server and listen on port 3001
-app.listen(3001, () => console.log('Server running on port 3001'));
+app.listen(3002, () => console.log('Server running on port 3002'));
