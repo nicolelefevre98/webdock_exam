@@ -8,7 +8,7 @@ const Roadmap = () => {
 
   useEffect(() => {
     // Fetch data fra backend API
-    fetch('http://localhost:3001/post')
+    fetch('http://217.78.237.62/post')
       .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((error) => console.log('Error fetching data:', error));

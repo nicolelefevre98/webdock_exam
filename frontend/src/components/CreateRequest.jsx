@@ -35,7 +35,7 @@ const CreateRequest = ({ fetchMethod = 'POST' }) => {
 
         const post = {title, category, description, image, tags, id}
 
-        fetch('http://localhost:3001/post', {
+        fetch('http://217.78.237.62/post', {
           method: fetchMethod,
           headers: {'Content-Type': 'application/json'},
           //laver om til en json-string:
@@ -53,7 +53,7 @@ const CreateRequest = ({ fetchMethod = 'POST' }) => {
         .catch(error => {
           console.log('Major failure!', error.message);
         })
-        .then(fetch('http://localhost:3001/users',{
+        .then(fetch('http://217.78.237.62/users',{
           method:fetchMethod,
           headers: {'Content-Type': 'application/json'},
           //laver om til en json-string:

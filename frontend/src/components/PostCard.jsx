@@ -19,7 +19,7 @@ const PostCard = ({status, title, desc, date, likes, comments, userName, avatar 
 
     const handleLike = () => {
         setLiked(!liked);
-        fetch(`http://localhost:3001/post/${id}/like`, {
+        fetch(`http://217.78.237.62/post/${id}/like`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

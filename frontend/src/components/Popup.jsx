@@ -19,7 +19,7 @@ export default function BasicModal({ id, title: initialTitle, description: initi
     console.log(postData)
 
     try {
-      const response = await fetch(`http://localhost:3001/posts/${ id }`, {
+      const response = await fetch(`http://217.78.237.62/posts/${ id }`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

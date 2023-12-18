@@ -21,7 +21,7 @@ const Layout = () => {
   const [users, setUsers] = useState([]); 
 
   useEffect(() => {
-    fetch(`http://localhost:3001/users/`)
+    fetch(`http://217.78.237.62/users/`)
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.log('Error fetching data:', error));

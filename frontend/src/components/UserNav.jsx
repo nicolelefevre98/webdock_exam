@@ -27,7 +27,7 @@ const UserNav = () => {
     console.log('Search Query:', searchQuery);
 
     try {
-      const response = await fetch(`http://localhost:3001/post/search?query=${searchQuery}`);
+      const response = await fetch(`http://217.78.237.62/post/search?query=${searchQuery}`);
       if (!response.ok) {
         throw new Error(`Request failed with status: ${response.status}`);
       }
@@ -99,7 +99,7 @@ const UserNav = () => {
             localStorage.removeItem('email');
           }}
         >
-          <a href="http://localhost:5173/">Log Out</a>
+          <a href="http://nicole.vps.webdock.cloud:5173/">Log Out</a>
         </button>
       </div>
     </nav>

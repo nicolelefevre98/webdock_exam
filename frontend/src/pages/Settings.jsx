@@ -22,7 +22,7 @@ const AccountSetting = () => {
           setEmail(decodedToken.email || '');
           console.log("Decoded Token in Settings:", decodedToken);
         } else {
-          const response = await fetch('http://localhost:3001/users/22483');
+          const response = await fetch('http://217.78.237.62/users/22483');
           if (!response.ok) {
             throw new Error('Failed to fetch user details');
           }

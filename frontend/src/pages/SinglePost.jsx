@@ -25,7 +25,7 @@ const Post = () => {
 
   useEffect(() => {
     setPostLoading(true);
-    fetch(`http://localhost:3001/post/${ id }`)
+    fetch(`http://217.78.237.62/post/${ id }`)
       .then((response) => response.json())
       .then((data) => setPost(data))
       .catch((error) => console.log('Error fetching data:', error));
@@ -34,7 +34,7 @@ const Post = () => {
 
   useEffect(() => {
     setUsersLoading(true);
-    fetch(`http://localhost:3001/users/`)
+    fetch(`http://217.78.237.62/users/`)
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.log('Error fetching data:', error));
@@ -43,7 +43,7 @@ const Post = () => {
 
   useEffect(() => {
     setCommentsLoading(true);
-    fetch(`http://localhost:3001/comments/`)
+    fetch(`http://217.78.237.62/comments/`)
       .then((response) => response.json())
       .then((data) => setComments(data))
       .catch((error) => console.log('Error fetching data:', error));

@@ -21,7 +21,7 @@ const CreateComment = () => {
         }
         console.log(postcomment);
         
-        fetch(`http://http://217.78.237.62/comments`, {
+        fetch(`http://217.78.237.62/comments`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(postcomment),
