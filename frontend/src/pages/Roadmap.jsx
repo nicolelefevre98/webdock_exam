@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import  '/./src/styles/Roadmap.scss';
-import RoadmapColumn from '../components/Roadmapcolumn';
+import RoadmapColumn from '../components/RoadmapColumn';
 import { Link } from 'react-router-dom';
 
 const Roadmap = () => {
