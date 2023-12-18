@@ -1,0 +1,77 @@
+@import "./globals.scss";
+
+.roadmap {
+    display: flex;
+    background-color: $white;
+    width: auto;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 10px 10px 10px;
+    
+    .roadmapColumn {
+        flex: 1;
+        justify-content: space-around;
+        max-width: 33%;
+        border-radius: 10px;
+
+        .roadmapColumnPlanned {
+            @include RoadmapColumn;
+            display: flex;
+            
+            .dot { 
+                background-color: $blue;
+                height: 1vw;
+                width: 1vw;
+                border: 0.2vw solid $blue;
+                border-radius: 100%;
+                margin: 1vw;
+            }
+        }
+
+        .roadmapColumnProgress{
+            @include RoadmapColumn;
+            display: flex;
+            
+            .dot { 
+                background-color: $green1;
+                width: 1vw;
+                height: 1vw;
+                border: 0.2vw solid $green1;
+                border-radius: 100%;
+                margin: 1vw;
+            }
+        }
+        
+        .roadmapColumnCompleted {
+            @include RoadmapColumn;
+            display: flex;
+            
+            .dot { 
+                background-color: $purple;
+                height: 1vw;
+                width: 1vw;
+                border: 0.2vw solid $purple;
+                border-radius: 100%;
+                margin: 1vw;
+            }
+        }
+    }
+
+    .roadmapContent {
+        
+        box-sizing: border-box;
+        background: $white;
+        border: 0.2vw solid $lightGrey;
+        cursor: pointer;
+        overflow: auto;
+        height: 350px;
+        white-space: nowrap;
+        
+    }
+
+    .roadmapContent:last-of-type {
+        border-radius: 10px;
+        transform: translatey(-1px);
+    }
+}
